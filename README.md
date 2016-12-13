@@ -4,6 +4,10 @@
 
 Rylai is a angular directive and service lib 
 
+## demo
+[DEMO](https://tristandongmaster.github.io/angular-ui-platform/example/index#/home)
+![DEMO](./img/demo.png)
+
 ## 版本
 
 当前版本 0.0.1
