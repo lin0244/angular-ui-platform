@@ -1,0 +1,32 @@
+<div class="ics-date-picker" ng-class="{true: '', false: 'ics-date-picker-double'}[config.single]">
+    <div class="ice-query-label">
+        <span ng-transclude></span>
+    </div>
+    <div class="dropdown form-group date-picker">
+        <a class="dropdown-toggle" id="{{id+'start'}}" role="button" data-toggle="dropdown" data-target="#" href="javascript:void()">
+            <div class="input-group date">
+                <input type="text" class="form-control" data-ng-model="startDate">
+                <span class="input-group-addon"> <i class="fa fa-calendar"></i>
+        </span>
+            </div>
+        </a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+            <datetimepicker data-ng-model="startDate" data-datetimepicker-config="config.start" data-before-render="beforeRenderStartDate($view, $dates, $leftDate, $upDate, $rightDate)" />
+        </ul>
+    </div>
+    <span ng-hide={{config.single}}>
+    <span class="glyphicon glyphicon-minus"></span>
+    </span>
+    <div class="dropdown form-group date-picker" ng-hide={{config.single}}>
+        <a class="dropdown-toggle" id="{{id+'end'}}" role="button" data-toggle="dropdown" data-target="#" href="javascript:void()">
+            <div class="input-group date">
+                <input type="text" class="form-control" data-ng-model="endDate">
+                <span class="input-group-addon"> <i class="fa fa-calendar"></i>
+        </span>
+            </div>
+        </a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+            <datetimepicker data-ng-model="endDate" data-datetimepicker-config="config.end" data-before-render="beforeRenderEndDate($view, $dates, $leftDate, $upDate, $rightDate)" />
+        </ul>
+    </div>
+</div>

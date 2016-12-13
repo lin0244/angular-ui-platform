@@ -118,6 +118,7 @@ app.controller('homeController', function($scope, httpRylai, CheckboxService, Ra
 	$scope.queryFn = queryFn
 
 	function queryFn() {
+		return
 		httpRylai.get('/list', {
 			p: $scope.pagination.currentPage,
 			s: $scope.pagination.size,
@@ -243,11 +244,11 @@ app.controller('layoutController', function($rootScope, $scope, httpRylai, $time
 				"sub": [{
 					"id": 6,
 					"name": "权限管理",
-					"url": "/vpal-oss/permission/permission.html"
+					"url": "home"
 				}, {
 					"id": 5,
 					"name": "角色管理",
-					"url": "/vpal-oss/role/role.html"
+					"url": "home"
 				}]
 			}]
 		}, {
@@ -259,11 +260,11 @@ app.controller('layoutController', function($rootScope, $scope, httpRylai, $time
 				"sub": [{
 					"id": 3,
 					"name": "用户管理",
-					"url": "/vpal-oss/user/user.html"
+					"url": "home"
 				}, {
 					"id": 3,
 					"name": "用户管理",
-					"url": "/vpal-oss/user/user.html"
+					"url": "home"
 				}]
 			}, {
 				"id": 4,
@@ -271,11 +272,11 @@ app.controller('layoutController', function($rootScope, $scope, httpRylai, $time
 				"sub": [{
 					"id": 6,
 					"name": "权限管理",
-					"url": "/vpal-oss/permission/permission.html"
+					"url": "home"
 				}, {
 					"id": 5,
 					"name": "角色管理",
-					"url": "/vpal-oss/role/role.html"
+					"url": "home"
 				}]
 			}]
 		}]

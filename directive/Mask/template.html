@@ -1,0 +1,13 @@
+	<div class="ics-mask" ng-if="conf.show">
+		<div class="v-model">
+			<div class="v-head">
+				<div class="v-head-text">{{conf.title}}</div>
+				<div class="v-head-close hide" data-act="close">x</div>
+			</div>
+			<div class="v-body">{{conf.body}}</div>
+			<div class="v-bottom">
+				<button type="button" class="btn btn-default" data-act="cancel" ng-click="conf.show=false" ng-if="conf.cancel">取消</button>
+				<button type="button" class="btn btn-info" data-act="sure" ng-click="conf.ok()" ng-if="conf.ok">确定</button>
+			</div>
+		</div>
+	</div>

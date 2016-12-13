@@ -1,0 +1,68 @@
+<div class="row">
+  <div class="col">
+    
+    <div class="form-inline ics-pagination " >
+
+      <span class="ics-total-page"  >
+        第
+        <span ng-bind='conf.currentPage'></span>
+        /
+        <span  ng-bind='conf.totalPage'></span>
+        页,
+        <span>
+          共
+          <span  ng-bind='conf.count'></span>
+          条
+        </span>
+        每页<select 
+        ng-model="conf.size" 
+        ng-options="option for option in conf.perPageOptions " 
+        ng-change="changeItemsPerPage()">
+        </select>
+      </span>
+      <nav class="right pagination-page" >
+       <div class="{{conf.vpalClass}}"></div>
+        <ul class="pagination">
+          <li>
+            <a aria-label="Previous"   ng-click="changeCurrentPage(1)">
+              <span aria-hidden="true" class="pagePre">首页</span>
+            </a>
+          </li>
+          <li>
+            <a aria-label="Previous" ng-click="prevPage()">
+              <span aria-hidden="true" class="pagePre">&laquo;</span>
+            </a>
+          </li>
+          <li ng-repeat="item in conf.pageList track by $index" ng-class="{active: item == conf.currentPage}"
+            ng-click="changeCurrentPage(item)">
+            <span  ng-bind='item'></span>
+          </li>
+          <li>
+            <a aria-label="Next" ng-click="nextPage()">
+              <span aria-hidden="true" class="pageNext">&raquo;</span>
+            </a>
+          </li>
+          <li>
+            <a aria-label="Next"  ng-click="changeCurrentPage(conf.totalPage)">
+              <span aria-hidden="true" class="pageNext">末页</span>
+            </a>
+          </li>
+          <div class="form-group">
+            <div class="go-to">
+              <div class="form-group ics-number-go">
+                <div class="input-group">
+                  <input type="number" class="form-control" placeholder="跳转到"
+                  ng-model="pageGo" min="1" max="{{vpalPaginationTotal}}"  class="form-control" ng-trim>    
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" ng-click="changeCurrentPage(pageGo)">Go</button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </nav>
+    </div>
+
+      </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="ics-navigation">
+  <div class='nav-ct'>
+    <ul class='nav' >
+      <li class="menu first" ng-repeat="x in globalNavigation track by $index" ng-mouseenter="mouseEnter($event)"
+     ng-mouseleave="mouseLeave($event)">
+        <span class="nav-icon" >
+        <!--  <img ng-src="/img/icon/{{x.icon}}.png"> -->
+         </span> 
+        <span ng-bind="x.name" ></span>
+           <div  class="nav-detail {{$index <8?'':'position-up'}} hide" >
+              <div class="menu-second" ng-repeat="second in x.sub track by $index">
+                <span class="menu second">
+                  <span>{{second.name}}</span>
+                </span>
+              <div class="sub" ng-click="targetClick($event)">
+                <span class="menu third" ng-repeat="third in second.sub" >
+                  <span class="line-icon"></span>
+                  <a target="" ng-if="third.target==1" ng-href="iframe?{{third.url}}">{{third.name}}</a>
+                  <a target="_blank" ng-if="third.target==2" ng-href="{{third.url}}">{{third.name}}</a>
+                  <a target="" ng-if="third.target!=1&&third.target!=2" ng-href="#/{{third.url}}">{{third.name}}</a>
+                </span>
+              </div>
+            </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div> 

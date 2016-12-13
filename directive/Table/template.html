@@ -1,0 +1,38 @@
+<div ng-class="{'table-responsive':responsive}">
+	<table class="table table-hover" ng-class="{'table-bordered':bordered}">
+	  <thead>
+	    <tr>
+	      <th>
+	      	<span>#</span>
+	      	<input type="checkbox" 
+				   class="ice-checkbox-normal" 
+				   ng-class="{'hide': !rowSelectable}"
+				   ng-click="onSelectAll()"
+				   ng-model="checkAllModel"
+				   ng-show="{{optType=='checkbox'}}">
+	      </th>
+	      <th ng-repeat="column in columns">{{column.title}}</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr ng-repeat="row in source track by $index" >
+	      <th scope="row">
+	      	<span>{{ $index + 1}}</span>
+			<input type="{{$parent.optType}}" 
+				   id="row_{{$index}}" 
+				   name="row_{{$index}}" 
+				   class="ice-checkbox-normal" 
+				   ng-class="{'hide': !rowSelectable}"
+				   ng-click="onSelect($event,this)"
+				   ng-model="checkSingleModel"
+				   ng-checked="selectedRowKeys.includes($index)"
+				   ng-disabled="disabledRowKeys.includes($index)">
+	      </th>
+	      
+	      <td ng-repeat="column in columns">{{row[column.dataIndex]}}</td>
+
+	    </tr>
+	    
+	  </tbody>
+	</table>
+</div>

@@ -1,0 +1,127 @@
+@color-menu: #aeb3b5;
+@color-menu-hover: #ffffff;
+@font-menu: 14px;
+@color-detail:#455a64;
+
+.ics-navigation{
+	position: relative;
+	width: 230px;
+	.line-icon{
+	    display: inline-block;
+	    height: 14px;
+	    width: 2px;
+	    background-color: #b4babe;
+	    vertical-align: sub;
+	    margin: 0 10px
+	}
+	.nav-icon{
+		vertical-align: top;
+	}
+	.table{
+		display: table;
+	}
+	.row{
+		display: table-row;
+	}
+	.cell{
+		display: table-cell;
+	}
+	.color-hover{
+		background-color: @color-detail !important;
+		color: @color-menu-hover !important;
+	}
+
+	.menu{
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		color:@color-menu;
+		a{
+			color: @color-menu;
+		}
+	}
+	a{
+		text-decoration: none;
+	}
+	ul{
+		list-style: none;
+	}
+	li{
+		list-style: none;
+  	}
+	.first{
+		font-size: @font-menu;
+		padding: 15px 40px;
+	}
+
+	.nav > .menu:hover{
+		cursor: pointer;
+		color: @color-menu-hover;
+		background-color: @color-detail;
+	}
+	.nav-detail{
+		&.position-up{
+		    bottom: 0;
+		    top: auto;
+		}
+
+		//display: none;
+		background-color: @color-detail;
+		top:0px;
+		left: 230px;
+		position: absolute;
+		width: 800px;
+		color: white;
+		-moz-box-shadow: 10px 10px 5px #888888;
+		box-shadow: 5px 5px 10px #888888;
+		z-index: 999999;
+		border-radius:0px 15px 15px 0px;
+		cursor: default;
+		> .sub{
+			margin-left: 100px;
+	        margin-top: -16px;
+			margin-bottom: 30px;
+			font-size: 12px;
+		}
+		> .menu{
+			margin-top: 15px;
+		}
+		.second{
+			font-size: 14px;
+			float: left;
+		}
+		
+		.menu-second{
+			overflow: hidden;
+			    margin: 20px 20px;
+		}
+		.menu-second .sub{
+			float: right;
+			width: 630px;
+			padding-top: 2px;
+		}
+
+		.sub > .menu{
+			display: inline-block;
+			    padding: 0 0px 10px 0px;
+		}
+
+		a{
+			text-decoration: none;
+			color: @color-menu;
+		}
+		> span:hover{
+			color: @color-menu-hover;
+		}
+		.third a:hover{
+			color: #228eca !important
+		}
+		.third a{
+			font-size: 12px;
+		}
+	}
+}
+	

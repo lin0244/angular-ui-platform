@@ -1,0 +1,19 @@
+<div class="ics-top-navigation" >
+  <div class="ics-top-menu">
+    <div class="menu-level">
+      <span class="level-first level"  ng-click="goHome()">
+        <a href="#/home">
+          <span class="nav-icon level">
+            <span class="glyphicon glyphicon-home" ></span>
+          </span>
+          首页
+        </a>
+      </span>
+      <span class="custom-level" ng-repeat="data in levelMenu.data track by $index">
+        <span class="glyphicon glyphicon-menu-right"></span>
+        <span  ng-bind="data"></span>
+      </span>
+    </div>
+  </div>
+  <ics-user-info conf='userInfo'></ics-user-info>
+</div>

@@ -1,0 +1,18 @@
+<div class="ics-layout">
+	<div class="nav-left" ng-show='conf.navShow'>
+		<a href="#/home">
+			<img ng-src="{{logoUrl}}"  class="logo">
+		</a>
+	 <ics-navigation conf="conf.tree" level-menu='conf.levelMenu' ></ics-navigation>
+	</div>
+	<div class="nav-right">
+		<div ng-show='conf.navShow'>
+			<ics-level-menu level-menu='conf.levelMenu' user-info='conf.userInfo'>
+	    	</ics-level-menu> 
+		</div>
+		<span  ng-transclude></span>
+		<div class="layout-view"  ng-cloak>
+			 <div ui-view></div>
+		</div>
+	</div>
+</div>
