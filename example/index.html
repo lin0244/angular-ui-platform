@@ -1,0 +1,48 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Rylai</title>
+    <link rel="stylesheet" href="./lib/font-awesome-4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./lib/nprogress/nprogress.css">
+    <link rel="stylesheet" type="text/css" href="./lib/bootstrap-daterangepicker/daterangepicker.css">
+
+    <style type="text/css">
+    .my-wrap{
+        padding: 20px;
+    }
+    .loadingMask{
+        background: rgba(0,0,0,0.3);
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom:0;
+        right: 0;
+        z-index: 100;
+    }
+
+    </style>
+</head>
+<body>
+<div >
+        <div ng-controller="layoutController">
+            <ics-layout-block conf='layout' logo-url="/img/logo.png">
+            </ics-layout-block>
+        </div>
+</div>
+<div class="loadingMask hidden"></div>
+
+<script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./lib/nprogress/nprogress.js"></script>
+<script type="text/javascript" src="./lib/angular/angular.js"></script>
+<script src="./lib/router/angular-ui-router.min.js"></script>
+<script src="./dist/rylai.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<script src="./lib/angular-bootstrap-datetimepicker/js/datetimepicker.main.js"></script>
+<script type="text/javascript" src="./lib/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="./lib/angular-switcher/angular-switcher.js"></script>
+<link href="./lib/angular-switcher/angular-switcher.min.css" rel="stylesheet">
+</body>
+</html>
